@@ -8,9 +8,20 @@ import { SearchService } from '../search.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private search: SearchService) { }
+  searchText: string = "";
+  results: any;
+
+  constructor(private searchService: SearchService) { }
+    
+    search() {
+      this.searchService.getInfo(this.searchText).subscribe(res => this.results = res);
+      console.log(this.results);
+    }
+
+  
 
   ngOnInit() {
+    
   }
 
 }

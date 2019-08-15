@@ -1,6 +1,26 @@
-<app-header></app-header>
+<div class="containter row">
+    <div class="center col-12">
 
-<app-play-now></app-play-now>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">da Boiz Crew Music Search</a>
 
-<app-search></app-search>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" [routerLink]="['/']">Search <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" [routerLink]="['/playlists']">Playlists</a>
+                    <a class="nav-item nav-link" [routerLink]="['/favorites']">Favorites</a>
+                </div>
+            </div>
+        </nav>
+        
+    </div>
+</div>
+
+
+
+<router-outlet></router-outlet>

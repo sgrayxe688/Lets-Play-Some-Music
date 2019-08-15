@@ -1,16 +1,23 @@
-<div class="col-12 row-lg-6 form-group">
+<div class="main container">
+<div class="col-9 row-lg-6 form-group"><br>
     <label class="" for="search">Search for: </label>
     <input class="form-control" type="text" id="searchBox" placeholder="Song Name" [(ngModel)]="searchText">
   </div>
   
-  <div class="col-12 row-lg-6 form-group">
+  <div class="col-4 row-lg-6 form-group">
     <input id="submit" class="submit form-control" type="submit" value="submit" (click)="search()">
   </div>
 
-  <div class="col-12 center" *ngFor='let result of results'>
+<div class="container row">
+  <div class="col-md-12 col-lg-6 center" *ngFor='let result of results'>
     <img [src] = "result.artworkUrl100">
     <p>Song Name: {{result.trackName}}</p>
     <p>Artist: {{result.artistName}}</p>
     <p>Album: {{result.collectionName}}</p>
-    <button>Play Now</button><button>Add to Playlist</button><button>Add to Favorites</button>
+    <audio controls>
+      <source [src]="result.previewUrl" type="audio/m4a">
+    </audio><br>
+  <button>Add to Playlist</button><button (click)="favorites(result)">Add to Favorites</button><br>
+    
   </div>
+</div>

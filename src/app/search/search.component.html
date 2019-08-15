@@ -9,7 +9,7 @@
   </div>
 
 <div class="container row">
-  <div class="col-md-12 col-lg-6 center" *ngFor='let result of results'>
+  <div class="col-sm-12 col-md-6 col-lg-4 center" *ngFor='let result of results'>
     <img [src] = "result.artworkUrl100">
     <p>Song Name: {{result.trackName}}</p>
     <p>Artist: {{result.artistName}}</p>
@@ -17,7 +17,7 @@
     <audio controls>
       <source [src]="result.previewUrl" type="audio/m4a">
     </audio><br>
-  <button>Add to Playlist</button><button (click)="favorites(result)">Add to Favorites</button><br>
+  <button (click)="playlist(result)">Add to Playlist</button><button (click)="favorites(result)">Add to Favorites</button><br>
     
   </div>
 </div>

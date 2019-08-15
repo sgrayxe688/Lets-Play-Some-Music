@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SearchService {
-  resultSear: Array <any> []
+  resultSearch: Array<any> = []
   constructor(private http: HttpClient) { }
     
   getInfo(searchText: string) {
@@ -14,15 +14,14 @@ export class SearchService {
     .pipe(
       map(res => res["results"])
     )
-
   }
 
   saveResults(searchRes){
-    this.resultSear
+    this.resultSearch = searchRes
   }
 
   returnSave(){
-    return this.resultSear
+    return this.resultSearch
   }
 
 }

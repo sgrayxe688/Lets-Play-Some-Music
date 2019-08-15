@@ -1,1 +1,9 @@
-<p>playlists works!</p>
+<h1>Playlist</h1>
+<!-- <button>New Playlist</button> -->
+<div *ngFor="let playlist of playlist">
+    Song: {{playlist.trackName}}, Artist: {{playlist.artistName}}, Album: {{playlist.collectionName}}, <audio controls>
+            <source [src]="playlist.previewUrl" type="audio/m4a">
+          </audio>
+</div>
+
+

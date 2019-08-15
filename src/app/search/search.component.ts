@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
+import { FavoritesService } from '../favorites.service';
+import { PlayistService } from '../playist.service';
 
 @Component({
   selector: 'app-search',
@@ -9,30 +11,29 @@ import { SearchService } from '../search.service';
 export class SearchComponent implements OnInit {
 
   searchText: string = "";
-  // albumName: string = this.getElementById("albumName")
-  // artistName: string = event.getElementById("#artistyName").value;
-  results: any;
+  results: Array<any>;
 
-  constructor(private searchService: SearchService) { }
+  constructor(private searchService: SearchService, private favoritesService: FavoritesService, private playistService: PlayistService) { }
     
     search() {
       this.searchService.getInfo(this.searchText).subscribe(res => {this.results = res
-  
+      this.searchService.saveResults(res)
       });
       console.log(this.results);
     }
 
     favorites(result) {
-      let songName: string = result.trackName; 
-      let albumName: string = result.collectionName;
-      let artistName: string = result.artistName;
-      let previewUrl: string = result.previewUrl;
-      console.log(songName, albumName, artistName, previewUrl);
+      this.favoritesService.favorites(result.trackName, result.collectionName, result.artistName, result.previewUrl);
     }
 
-  
+    playlist(result) {
+      this.playistService.playlists(result.trackName, result.collectionName, result.artistName, result.previewUrl);
+    }
+
+    
 
   ngOnInit() {
+    this.results = this.searchService.returnSave()
     
   }
 

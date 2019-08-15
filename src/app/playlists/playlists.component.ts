@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayistService } from '../playist.service';
 
 @Component({
   selector: 'app-playlists',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playlists.component.scss']
 })
 export class PlaylistsComponent implements OnInit {
+  playlist: Array<Object> = [];
+  constructor(private playistService: PlayistService) { 
 
-  constructor() { }
+  }
+
+  // createPlaylist() {
+  //   this.playistService.playlists(this.song, this.album, this.artist, this.url)
+  // }
+
 
   ngOnInit() {
+    this.playlist = this.playistService.playlist;
   }
 
 }

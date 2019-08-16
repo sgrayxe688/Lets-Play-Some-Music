@@ -12,14 +12,31 @@ button {
 }
 
 .main {
-    background-image: url("/assets/background.jpg");
-    background-repeat: x;
+    // background-color: #49516F;
+
 }
 
 .results {
-    background-color: white;
-    opacity: 0.8;
-    color: black;
-    margin: 5px;
+    background-image: url("/assets/background.jpg");
+    color: white;
+    border: 3px solid #49516F;
+}
+
+.top {
+    background-image: url("/assets/background.jpg");
+    color: white;
+    height: 180px;
+}
+
+audio {
+    width: 150px;
+}
+
+#searchBox {
+    max-width: 600px;
+}
+
+#submit {
+    max-width: 300px;
 }
 

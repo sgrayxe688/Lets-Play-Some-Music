@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { AuthGuard } from '../auth.guard';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   private username: string;
   private password: string;
   
-  constructor(private userService: UserService, private authGuard: AuthGuard) { }
+  constructor(private userService: UserService, private authGuard: AuthGuard, private router: Router) { }
 
   ngOnInit() {
   }
@@ -22,13 +23,14 @@ export class LoginComponent implements OnInit {
     const password = event.target.querySelector('#password').value
     // this.user.confirmUserDetails(username, password)
     let result = this.userService.confirmUserDetails(username, password)
-    if(result === "failure"){
+    if (result === "acceptedCredentials"){
+      console.log("success")
+      this.router.navigateByUrl('/search')
+    }
+    else if(result === "failure"){
       alert ("NONONONONO lets get this right")
     }
-    else {
-      const isLoggedIn = true
-      console.log(this.userService.uname)
-    }
+    
   }
 
 }

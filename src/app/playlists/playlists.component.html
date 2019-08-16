@@ -1,9 +1,10 @@
-<h1>Playlist</h1>
-<!-- <button>New Playlist</button> -->
-<div *ngFor="let playlist of playlist">
-    Song: {{playlist.trackName}}, Artist: {{playlist.artistName}}, Album: {{playlist.collectionName}}, <audio controls>
+<div class="container row">
+  <tr *ngFor="let playlist of playlist">
+    <td class="col-3">Song: {{playlist.trackName}}</td> 
+    <td class="col-3">Artist: {{playlist.artistName}}</td>
+    <td class="col-3">Album: {{playlist.collectionName}}</td> 
+    <td class="col-3"><audio controls>
             <source [src]="playlist.previewUrl" type="audio/m4a">
-          </audio>
+          </audio></td>
+  </tr>
 </div>
-
-

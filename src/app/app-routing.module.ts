@@ -11,6 +11,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignUpComponent},
+  {path: 'search', component: SearchComponent, canActivate: [AuthGuard]},
   {path: 'playlists', component: PlaylistsComponent, canActivate: [AuthGuard]},
   {path: 'favorites', component: FavoritesComponent, canActivate: [AuthGuard]},
   {path: '', component: SearchComponent, canActivate: [AuthGuard]},

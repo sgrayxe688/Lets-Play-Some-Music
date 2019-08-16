@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
     event.preventDefault()
     const username = event.target.querySelector('#username').value
     const password = event.target.querySelector('#password').value
-    // this.user.confirmUserDetails(username, password)
     let result = this.userService.confirmUserDetails(username, password)
     if (result === "acceptedCredentials"){
       console.log("success")

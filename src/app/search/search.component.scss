@@ -12,6 +12,13 @@ button {
 }
 
 .main {
-    background-color: lightgrey;
+    background-image: url("/assets/background.jpg");
+}
+
+.results {
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    margin: 5px;
 }
 

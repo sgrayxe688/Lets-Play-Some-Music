@@ -8,8 +8,8 @@
     <input id="submit" class="submit form-control" type="submit" value="submit" (click)="search()">
   </div>
 
-<div class="container row">
-  <div class="col-sm-12 col-md-6 col-lg-4 center" *ngFor='let result of results'>
+<div class="container-fluid row">
+  <div class="col-sm-12 col-md-6 col-lg-4 center box results" *ngFor='let result of results'>
     <img [src] = "result.artworkUrl100">
     <p>Song Name: {{result.trackName}}</p>
     <p>Artist: {{result.artistName}}</p>

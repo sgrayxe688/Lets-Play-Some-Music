@@ -8,7 +8,7 @@ import { User } from './user.interface'
 export class UserService {
   uname: string; "";
   users: Array<User>;
-  currentUser: Array<User>;
+  currentUser: User;
   constructor() { }
 
 

@@ -13,8 +13,6 @@ import { PlayNowComponent } from './play-now/play-now.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthGuard } from './auth.guard';
-import { HomeComponent } from './home/home.component';
-import { HttpClientModule } from '@angular/common/http';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
@@ -27,7 +25,6 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     PlayNowComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
     SignUpComponent,
   ],
   imports: [

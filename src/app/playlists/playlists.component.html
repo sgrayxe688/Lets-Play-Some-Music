@@ -1,8 +1,8 @@
 <div class="container row">
   <tr *ngFor="let playlist of playlist">
-    <td class="col-3">Song: {{playlist.trackName}}</td> 
-    <td class="col-3">Artist: {{playlist.artistName}}</td>
-    <td class="col-3">Album: {{playlist.collectionName}}</td> 
+    <td class="col-3">Song: {{playlist.trackName | text}}</td> 
+    <td class="col-3">Artist: {{playlist.artistName | text}}</td>
+    <td class="col-3">Album: {{playlist.collectionName | text}}</td> 
     <td class="col-3"><audio controls>
             <source [src]="playlist.previewUrl" type="audio/m4a">
           </audio></td>

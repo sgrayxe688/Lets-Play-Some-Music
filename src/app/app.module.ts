@@ -13,6 +13,7 @@ import { PlaylistsComponent } from './playlists/playlists.component';
 import { PlayNowComponent } from './play-now/play-now.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { TextPipe } from './text.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     PlaylistsComponent,
     PlayNowComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TextPipe
   ],
   imports: [
     BrowserModule,

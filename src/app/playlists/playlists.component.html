@@ -1,10 +1,15 @@
-<div class="container row">
-  <tr *ngFor="let playlist of playlist">
-    <td class="col-3">Song: {{playlist.trackName}}</td> 
-    <td class="col-3">Artist: {{playlist.artistName}}</td>
-    <td class="col-3">Album: {{playlist.collectionName}}</td> 
-    <td class="col-3"><audio controls>
-            <source [src]="playlist.previewUrl" type="audio/m4a">
-          </audio></td>
-  </tr>
+<div>
+  <input type="text" [(ngModel)]="nameOfPlaylist" placeholder="New Playlist Name"><button (click)="createPlaylist()">Create New Playlist</button>
+</div>
+
+
+<div *ngFor="let playlist of allPlaylists" class="main">
+  <h1>{{playlist.name}}</h1>
+  <div *ngFor="let song of playlist.song" class="container-fluid row songs">
+    <p class="col-sm-6 col-md-6 col-lg-3 ">Song: {{song.trackName}}</p> 
+    <p class="col-sm-6 col-md-6 col-lg-3 ">Artist: {{song.artistName}}</p>
+    <p class="col-sm-6 col-md-6 col-lg-3 ">Album: {{song.collectionName}}</p> 
+    <div class="col-sm-6 col-md-6 col-lg-3 ">
+      <audio controls><source [src]="song.previewUrl" type="audio/m4a"></audio></div>
+  </div>
 </div>

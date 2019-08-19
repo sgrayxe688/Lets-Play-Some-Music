@@ -6,11 +6,11 @@
 
 
 <div *ngFor="let playlist of allPlaylists" class="main">
-  <h1 class="playlist-title">{{playlist.name}}</h1>
+  <h1 class="playlist-title">{{playlist.name | text}}</h1>
   <div *ngFor="let song of playlist.song" class="container-fluid row songs">
-      <p class="col-sm-6 col-md-6 col-lg-3"> Song: {{song.trackName}}</p>
-      <p class="col-sm-6 col-md-6 col-lg-3"> Artist: {{song.artistName}} </p>
-      <p class="col-sm-6 col-md-6 col-lg-3">Album: {{song.collectionName}}</p>
+      <p class="col-sm-6 col-md-6 col-lg-3"> Song: {{song.trackName | text}}</p>
+      <p class="col-sm-6 col-md-6 col-lg-3"> Artist: {{song.artistName | text}} </p>
+      <p class="col-sm-6 col-md-6 col-lg-3">Album: {{song.collectionName | text}}</p>
       <audio class="audio col-sm-6 col-md-6 col-lg-3" controls>
           <source [src]="song.previewUrl" type="audio/mp3">
       </audio>

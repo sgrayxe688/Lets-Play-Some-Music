@@ -10,9 +10,9 @@
   <div class="container-fluid row">
     <div class="col-sm-12 col-md-6 col-lg-4 center box results" *ngFor='let result of results'>
       <img [src]="result.album.cover_medium">
-      <p>Song Name: {{result.title}}</p>
-      <p>Artist: {{result.artist.name}}</p>
-      <p>Album: {{result.album.title}}</p>
+      <p>Song Name: {{result.title | text}}</p>
+      <p>Artist: {{result.artist.name | text}}</p>
+      <p>Album: {{result.album.title | text}}</p>
        
       <audio controls>
         <source [src]="result.preview" type="audio/mp3">

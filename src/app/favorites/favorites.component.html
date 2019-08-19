@@ -3,9 +3,9 @@
         <p class="col-sm-6 col-md-6 col-lg-3"> Song: {{userFav.trackName}}</p>
         <p class="col-sm-6 col-md-6 col-lg-3"> Artist: {{userFav.artistName}} </p>
         <p class="col-sm-6 col-md-6 col-lg-3">Album: {{userFav.collectionName}}</p>
-        <p class="col-sm-6 col-md-6 col-lg-3"><audio class="audio" controls>
-            <source [src]="userFav.previewUrl" type="audio/m4a">
-        </audio></p>
+        <audio class="audio col-sm-6 col-md-6 col-lg-3" controls>
+            <source [src]="userFav.previewUrl" type="audio/mp3">
+        </audio>
     </div>
     
     </div>

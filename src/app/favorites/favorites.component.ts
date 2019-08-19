@@ -9,13 +9,14 @@ import { FavoritesService } from '../favorites.service';
 export class FavoritesComponent implements OnInit {
   userFav: Array<Object> = [];
 
-  constructor(private favoritesService: FavoritesService) { 
 
+  constructor(private favoritesService: FavoritesService) { 
   }
 
 
   ngOnInit() {
     this.userFav = this.favoritesService.userFav;
+    localStorage.setItem("currentFavorites", JSON.stringify(this.userFav));
   }
 
 }

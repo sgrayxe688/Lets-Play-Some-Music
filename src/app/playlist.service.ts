@@ -13,10 +13,10 @@ export class PlaylistService {
 
   playlists(result, name) {
     let fullSong = {
-      trackName: result.trackName,
-      collectionName: result.collectionName,
-      artistName: result.artistName,
-      previewUrl: result.previewUrl,
+      trackName: result.title,
+      collectionName: result.album.title,
+      artistName: result.artist.name,
+      previewUrl: result.preview,
     }
     // this.newSong.push(fullSong);
     let songList = this.allPlaylists.filter((playlistName)=> name === playlistName["name"])

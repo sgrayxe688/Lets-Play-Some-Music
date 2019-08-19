@@ -1,23 +1,21 @@
-<div class="container row-8 top">
-  <div class="col-9 row-lg-6 form-group"><br>
-    <label class="" for="search">Search for: </label>
-    <input class="form-control" type="text" id="searchBox" placeholder="Song Name" [(ngModel)]="searchText">
-  </div>
-
-  <div class="col-4 row-lg-6 form-group">
-    <input id="submit" class="submit form-control" type="submit" value="submit" (click)="search()">
+<div class="d-flex justify-content-center">
+  <div class="searchbox">
+      <label class="" for="search">Search for: </label>
+      <input class="text" type="text" id="searchBox" placeholder="Song Name" [(ngModel)]="searchText"><button class="button submit" (click)="search()">Search</button>
   </div>
 </div>
+    
 
 <div class="main container">
   <div class="container-fluid row">
     <div class="col-sm-12 col-md-6 col-lg-4 center box results" *ngFor='let result of results'>
-      <img [src]="result.artworkUrl100">
-      <p>Song Name: {{result.trackName}}</p>
-      <p>Artist: {{result.artistName}}</p>
-      <p>Album: {{result.collectionName}}</p>
+      <img [src]="result.album.cover_medium">
+      <p>Song Name: {{result.title}}</p>
+      <p>Artist: {{result.artist.name}}</p>
+      <p>Album: {{result.album.title}}</p>
+       
       <audio controls>
-        <source [src]="result.previewUrl" type="audio/m4a">
+        <source [src]="result.preview" type="audio/mp3">
       </audio><br>
 
       <select placeholder="Add to Playlist" [(ngModel)]="selectedPlaylist">

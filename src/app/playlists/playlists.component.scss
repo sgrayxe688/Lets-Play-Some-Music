@@ -1,6 +1,6 @@
 .songs {
     color: #ffffff;
-    background-color: #8EA4D2;
+    background-color: rgb(142, 164, 210, .8);
     margin: 3px;
 }
 
@@ -8,4 +8,25 @@ audio {
     width: 150px;
 }
 
+.addPlaylist {
+    width: 70vw;
+    background-color: #49516F;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+}
 
+.text {
+    margin: 10px;
+    width: 40vw;
+}
+
+.button {
+    width: 20vw;
+}
+
+.playlist-title {
+    background-color: #49516F;
+    padding-left: 60px;
+    color: white;
+}

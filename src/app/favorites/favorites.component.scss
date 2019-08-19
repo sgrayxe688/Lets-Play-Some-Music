@@ -1,9 +1,14 @@
 .songs {
     color: #ffffff;
-    background-color: #8EA4D2;
+    background-color: rgb(142, 164, 210, .8);
     margin: 3px;
 }
 
 audio {
-    width: 150px;
+    width: 300px;
+}
+
+.delete {
+    width: 40px;
+    height: 40px;
 }

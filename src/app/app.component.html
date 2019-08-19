@@ -1,23 +1,24 @@
-<div class="container">
+<nav class="color navbar navbar-expand-md navbar-dark col-12">
+    <span class="navbar-brand col-8"><img src="">
+        <p class="title">COSMIC MUSIC PLAYER</p>
+    </span>
 
-        <nav class="navbar navbar-expand-md navbar-dark col-12">
-            <span class="navbar-brand col-8"><p class="title"> a music service</p></span>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-<router-outlet></router-outlet>
 
-            <div class="collapse navbar-collapse col-4" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" [routerLink]="['/']">Search <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" [routerLink]="['/playlists']">Playlists</a>
-                    <a class="nav-item nav-link" [routerLink]="['/favorites']">Favorites</a>
-                </div>
-            </div>
-        </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-</div>
+    <div class="collapse navbar-collapse col-4" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" [routerLink]="['/']">Search <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" [routerLink]="['/playlists']">Playlists</a>
+            <a class="nav-item nav-link" [routerLink]="['/favorites']">Favorites</a>
+        </div>
+    </div>
+</nav>
+
 
 <router-outlet></router-outlet>

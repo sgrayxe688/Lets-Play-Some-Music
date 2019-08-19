@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class FavoritesService {
   userFav: Object[] = [];
+  favorites: Object[] = [];
 
   constructor() { }
 
@@ -16,7 +17,7 @@ export class FavoritesService {
       previewUrl: url
     }
     let addedFavorite = this.userFav.push(fullSong);
-    localStorage.setitem("favorites", JSON.stringify(addedFavorite))
+    localStorage.setItem("favorites", JSON.stringify(addedFavorite));
   }
   }
 

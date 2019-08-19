@@ -11,25 +11,23 @@ button {
     margin: 10px;
 }
 
-.main {
-    // background-color: #49516F;
-
-}
-
 .results {
-    background-image: url("/assets/background.jpg");
+    background-color: rgba(73,81,111,0.6);
     color: white;
-    border: 3px solid #49516F;
+    border: 3px solid black;
 }
 
 .top {
-    background-image: url("/assets/background.jpg");
     color: white;
-    height: 180px;
+}
+
+.inside {
+    width: 50vw;
+    margin-left: 15vw;
 }
 
 audio {
-    width: 150px;
+    width: 300px;
 }
 
 #searchBox {
@@ -40,3 +38,21 @@ audio {
     max-width: 300px;
 }
 
+.searchbox {
+    width: 70vw;
+    background-color: #49516F;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+}
+
+
+
+.text {
+    margin: 10px;
+    width: 40vw;
+}
+
+.button {
+    width: 10vw;
+}

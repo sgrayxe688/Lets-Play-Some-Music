@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
     }
 
     userFav(result) {
-      this.favoritesService.favoriteList(result.trackName, result.collectionName, result.artistName, result.previewUrl);
+      this.favoritesService.favoriteList(result.title, result.album.title, result.artist.name, result.preview);
     }
 
 
@@ -42,3 +42,4 @@ export class SearchComponent implements OnInit {
   }
 
 }
+

@@ -11,9 +11,9 @@ export class SearchService {
   constructor(private http: HttpClient, private userService: UserService) { }
     
   getInfo(searchText: string) {
-    return this.http.get(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${searchText}&entity=song`)
+    return this.http.get(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${searchText}`)
     .pipe(
-      map(res => res["results"])
+      map(res => res["data"])
     )
   }
 

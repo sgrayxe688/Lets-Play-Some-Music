@@ -1,15 +1,18 @@
-<div>
-  <input type="text" [(ngModel)]="nameOfPlaylist" placeholder="New Playlist Name"><button (click)="createPlaylist()">Create New Playlist</button>
+<div class="d-flex justify-content-center">
+<div class="addPlaylist">
+  <input type="text" [(ngModel)]="nameOfPlaylist" placeholder="New Playlist Name" class="text"><button class="button" (click)="createPlaylist()">Create New Playlist</button>
+</div>
 </div>
 
 
 <div *ngFor="let playlist of allPlaylists" class="main">
-  <h1>{{playlist.name}}</h1>
+  <h1 class="playlist-title">{{playlist.name}}</h1>
   <div *ngFor="let song of playlist.song" class="container-fluid row songs">
-    <p class="col-sm-6 col-md-6 col-lg-3 ">Song: {{song.trackName}}</p> 
-    <p class="col-sm-6 col-md-6 col-lg-3 ">Artist: {{song.artistName}}</p>
-    <p class="col-sm-6 col-md-6 col-lg-3 ">Album: {{song.collectionName}}</p> 
-    <div class="col-sm-6 col-md-6 col-lg-3 ">
-      <audio controls><source [src]="song.previewUrl" type="audio/m4a"></audio></div>
+      <p class="col-sm-6 col-md-6 col-lg-3"> Song: {{song.trackName}}</p>
+      <p class="col-sm-6 col-md-6 col-lg-3"> Artist: {{song.artistName}} </p>
+      <p class="col-sm-6 col-md-6 col-lg-3">Album: {{song.collectionName}}</p>
+      <audio class="audio col-sm-6 col-md-6 col-lg-3" controls>
+          <source [src]="song.previewUrl" type="audio/mp3">
+      </audio>
   </div>
 </div>

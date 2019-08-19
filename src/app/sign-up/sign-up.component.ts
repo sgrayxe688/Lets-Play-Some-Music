@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,7 +9,7 @@ import { UserService } from '../user.service';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -23,9 +24,8 @@ export class SignUpComponent implements OnInit {
     if(signedUp === "failure"){
       alert ("NONONONONO lets get this right")
     }
-    else {
-      const isLoggedIn = true
-      console.log(this.userService.uname)
+    else if (signedUp === "validNewUser"){
+      this.router.navigateByUrl('/search')
     }
   }
 

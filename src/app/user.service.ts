@@ -1,6 +1,7 @@
 import { Injectable, LOCALE_ID } from '@angular/core';
 
 import { User } from './user.interface'
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,11 @@ export class UserService {
   uname: string; "";
   users: Array<User>;
   currentUser: User;
-  constructor() { 
+  constructor(private router: Router) { 
+  }
+  logOutUser(loggingOut){
+    localStorage.removeItem("currentUser")
+    this.router.navigateByUrl('/login')
   }
   confirmUserDetails(uname,pswd){
     this.users = JSON.parse(localStorage.getItem("users"))

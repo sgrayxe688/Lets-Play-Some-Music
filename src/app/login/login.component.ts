@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
     const password = event.target.querySelector('#password').value
     let result = this.userService.confirmUserDetails(username, password)
     if (result === "acceptedCredentials"){
-      console.log("success")
       this.router.navigateByUrl('/search')
     }
     else if(result === "failure"){

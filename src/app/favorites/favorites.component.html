@@ -1,3 +1,13 @@
+<div class="container row">
+<tr *ngFor="let userFav of userFav">
+    <td class="col-3"> Song: {{userFav.trackName}}</td>
+    <td class="col-3"> Artist: {{userFav.artistName}} </td>
+    <td class="col-3">Album: {{userFav.collectionName}}</td>
+    <td class="col-1"><audio controls>
+        <source [src]="userFav.previewUrl" type="audio/m4a">
+    </audio></td>
 
-// grab the song info 
-// display to favorites 
+
+</tr>
+
+</div>

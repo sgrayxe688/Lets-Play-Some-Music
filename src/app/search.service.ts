@@ -10,7 +10,7 @@ export class SearchService {
   constructor(private http: HttpClient) { }
     
   getInfo(searchText: string) {
-    return this.http.get(`https://itunes.apple.com/search?term=${searchText}&entity=song`)
+    return this.http.get(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${searchText}&entity=song`)
     .pipe(
       map(res => res["results"])
     )

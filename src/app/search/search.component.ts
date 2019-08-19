@@ -22,8 +22,8 @@ export class SearchComponent implements OnInit {
       console.log(this.results);
     }
 
-    favorites(result) {
-      this.favoritesService.favorites(result.trackName, result.collectionName, result.artistName, result.previewUrl);
+    userFav(result) {
+      this.favoritesService.favoriteList(result.trackName, result.collectionName, result.artistName, result.previewUrl);
     }
 
     playlist(result) {

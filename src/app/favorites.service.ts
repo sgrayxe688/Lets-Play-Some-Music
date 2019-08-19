@@ -17,7 +17,7 @@ export class FavoritesService {
     }
     this.userFav.push(fullSong);
 
-localStorage.setItem("userFav", JSON.stringify (fullSong));
+localStorage.setItem("fullSong", JSON.stringify (this.favoriteList));
 console.log(localStorage)
   }
   }

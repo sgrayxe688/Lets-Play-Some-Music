@@ -16,7 +16,7 @@ export class PlayistService {
       previewUrl: url
     }
     this.playlist.push(fullSong);
-    localStorage.setItem("playlist", JSON.stringify (fullSong));
+    localStorage.setItem("fullSong", JSON.stringify (this.playlists));
     console.log(localStorage)
   }
 
